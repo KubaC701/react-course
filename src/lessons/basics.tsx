@@ -36,11 +36,7 @@ export const ParagraphAsCreateElement = () => {
   return React.createElement(
     "div",
     null,
-    React.createElement(
-      "p",
-      { className: "paragraph" },
-      "This is a paragraph"
-    )
+    React.createElement("p", { className: "paragraph" }, "This is a paragraph")
   );
 };
 
@@ -69,17 +65,13 @@ export const UserProfile = () => {
 
 // Conditionals
 export const LoadingParagraph = () => {
-  const isLoading = false;
+  const isLoading = true;
   const content = "Hello world";
 
   return (
     <div>
       {content && <p className="paragraph">{content}</p>}
-      {isLoading ? (
-        <p>Loading...</p>
-      ) : (
-        <p>Our great page was loaded</p>
-      )}
+      {isLoading ? <p>Loading...</p> : <p>Our great page was loaded</p>}
     </div>
   );
 };
